@@ -1,1 +1,1 @@
-My Project - initial commit of maven archetype WebApp
+My Project - initial commit of maven archetype WebApp - DEMO APP:wq

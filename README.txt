@@ -1,1 +1,1 @@
-My Project
+My Project - initial commit of maven archetype WebApp

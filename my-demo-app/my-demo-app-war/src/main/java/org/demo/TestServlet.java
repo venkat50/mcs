@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.tangosol.net.CacheFactory;
 import com.tangosol.net.Member;
+import com.tangosol.net.NamedCache;
+
 import javax.servlet.annotation.WebServlet;
 
 /**
@@ -52,6 +54,17 @@ public final class TestServlet extends HttpServlet {
 		
 		response.getOutputStream().println(("Cluster Name: "+ CacheFactory.getCluster().getClusterName()));
 		response.getOutputStream().println(("Product Name: "+ CacheFactory.PRODUCT + " Version: "+ CacheFactory.VERSION));
+		
+		response.getOutputStream().println("Cache entries");
+		
+		NamedCache nc = CacheFactory.getCache("Person");
+        Iterator entries = nc.entrySet().iterator();
+
+        while (entries.hasNext()) {
+            response.getOutputStream().println("Cache entry: " + entries.next().toString());
+        }
+		
+		
 		
 		response.flushBuffer();
 	}

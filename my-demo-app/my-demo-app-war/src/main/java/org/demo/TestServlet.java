@@ -7,6 +7,8 @@ package org.demo;
 
 import java.io.IOException;
 import java.util.Iterator;
+
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +27,9 @@ import javax.servlet.annotation.WebServlet;
 public final class TestServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	
+	@Resource(mappedName = "Person")
+    private NamedCache nc;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -57,14 +62,12 @@ public final class TestServlet extends HttpServlet {
 		
 		response.getOutputStream().println("Cache entries");
 		
-		NamedCache nc = CacheFactory.getCache("Person");
+		//NamedCache nc = CacheFactory.getCache("Person");
         Iterator entries = nc.entrySet().iterator();
 
         while (entries.hasNext()) {
             response.getOutputStream().println("Cache entry: " + entries.next().toString());
         }
-		
-		
 		
 		response.flushBuffer();
 	}

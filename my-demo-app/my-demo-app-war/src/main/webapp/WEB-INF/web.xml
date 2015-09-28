@@ -17,6 +17,11 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  <resource-ref>
+      <res-ref-name>coherence/person</res-ref-name>      
+      <res-type>com.tangosol.net.NamedCache</res-type>      
+      <mapped-name>Person</mapped-name>
+  </resource-ref>
   <session-config>
     <session-timeout>30</session-timeout>
   </session-config>

@@ -6,6 +6,7 @@
 	<user-type-list>
 		<!-- by default just include coherence POF user types -->
 		<include>coherence-pof-config.xml</include>
+		 <include>coherence-rest-pof-config.xml</include>
 
 		<user-type>
 			<type-id>1000</type-id>
@@ -14,6 +15,17 @@
 				<class-name>org.demo.PersonSerializer</class-name>
 			</serializer>
 		</user-type>
+		
+		
+        <user-type>
+            <type-id>1005</type-id>
+            <class-name>org.demo.NameUpdater</class-name>
+        </user-type>
+        
+        <user-type>
+            <type-id>1006</type-id>
+            <class-name>org.demo.MyAgent</class-name>
+        </user-type>
 
 	</user-type-list>
 </pof-config>

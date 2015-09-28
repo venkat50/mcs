@@ -12,6 +12,18 @@
 		<cache-mapping>
 			<cache-name>Person</cache-name>
 			<scheme-name>my-demo-gar</scheme-name>
+			
+			<interceptors>
+			  <interceptor>
+                    <name>MyInterceptor</name>
+                    <instance>
+                        <class-name>
+                            org.demo.MyInterceptor
+                        </class-name>
+                    </instance>
+                </interceptor>
+            </interceptors>  
+            
 		</cache-mapping>
 
 	</caching-scheme-mapping>

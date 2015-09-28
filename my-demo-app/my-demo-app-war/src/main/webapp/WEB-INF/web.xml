@@ -13,10 +13,30 @@
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+      <servlet-name>Coherence REST</servlet-name>
+      <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer
+      </servlet-class>
+      <init-param>
+         <param-name>com.sun.jersey.config.property.resourceConfigClass
+         </param-name>
+         <param-value>
+            com.tangosol.coherence.rest.server.ContainerResourceConfig
+         </param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>Coherence REST</servlet-name>
+      <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
   <resource-ref>
       <res-ref-name>coherence/person</res-ref-name>      
       <res-type>com.tangosol.net.NamedCache</res-type>      

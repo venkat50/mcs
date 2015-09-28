@@ -1,5 +1,8 @@
 package org.demo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="person")
 public class Person {
 
 	private int id;

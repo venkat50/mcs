@@ -49,7 +49,7 @@ public class App {
 		System.out.println("Cache Name = " + cache.getCacheName() + " Cache Size = " + cache.size());
 
 		InvocationService service = (InvocationService) CacheFactory.getConfigurableCacheFactory()
-			.ensureService("MyService");
+			.ensureService("MyService-remote");
 
 		Map map = service.query(new MyAgent(), null);
 

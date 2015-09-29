@@ -45,7 +45,7 @@
     
         <remote-invocation-scheme>
             <scheme-name>example-invocation</scheme-name>
-            <service-name>MyService</service-name>
+            <service-name>MyService-remote</service-name>
             <initiator-config>
                 <tcp-initiator>
                     <remote-addresses>

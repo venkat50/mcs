@@ -23,9 +23,8 @@
 		</dependency>
     <dependency>
     	<groupId>my-demo-app</groupId>
-    	<artifactId>my-demo-app-gar</artifactId>
+    	<artifactId>my-demo-app-jpa</artifactId>
     	<version>1.0-SNAPSHOT</version>
-    	<scope>provided</scope>
     </dependency>
   </dependencies>
   <build>

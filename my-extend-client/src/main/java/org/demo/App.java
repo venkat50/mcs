@@ -24,7 +24,7 @@ public class App {
 		**/
 		System.out.println("Cache Name = " + cache.getCacheName() + " Cache Size = " + cache.size());
 
-		IntStream.range(1, 100).forEach(k -> cache.get(k));
+		IntStream.range(1, 25).forEach(k -> cache.get(k));
 
 		System.out.println("Cache Name = " + cache.getCacheName() + " Cache Size = " + cache.size());
 

@@ -19,8 +19,7 @@ public class PersonService {
     @Resource(mappedName = "Person")
     private NamedCache nc;
 
-    //NamedCache nc = CacheFactory.getCache("Person");
-    
+   
     public void addPerson(int id, String name, int age) {
         Person p = new Person(id);    	
         p.setName(name);

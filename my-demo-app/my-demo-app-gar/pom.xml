@@ -125,6 +125,26 @@
 			</exclusions>
 			<version>${coherence.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.oracle.toplink</groupId>
+			<artifactId>toplink-grid</artifactId>
+			<version>${weblogic.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>javax.persistence</artifactId>
+					<groupId>com.oracle.toplink</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>eclipselink</artifactId>
+					<groupId>com.oracle.toplink</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>my-demo-app</groupId>
+			<artifactId>my-demo-app-jpa</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	
 </project>

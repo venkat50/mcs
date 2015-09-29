@@ -31,7 +31,12 @@
 		<module>my-demo-app-gar</module>
 		<module>my-demo-app-war</module>
 		<module>my-demo-app-ear</module>
+
 		
+		
+		
+		
+		<module>my-demo-app-jpa</module>
 	</modules>
 	<name>my-demo-app</name>
 </project>

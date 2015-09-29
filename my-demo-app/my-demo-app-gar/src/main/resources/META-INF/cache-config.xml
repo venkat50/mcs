@@ -31,7 +31,7 @@
 	<caching-schemes>
 
 
-		<distributed-scheme>			
+		<distributed-scheme>
 			<scheme-name>my-demo-gar</scheme-name>
 			<service-name>EclipseLinkJPA</service-name>
 			<backing-map-scheme>
@@ -65,6 +65,27 @@
 		</distributed-scheme>
 
 
+		<proxy-scheme>
+			<service-name>ExtendTcpProxyService1</service-name>
+			<acceptor-config>
+				<tcp-acceptor>
+					<local-address>
+						<address>localhost</address>
+						<port>9099</port>
+					</local-address>
+				</tcp-acceptor>
+			</acceptor-config>
+			<autostart>true</autostart>
+		</proxy-scheme>
+
+
+		<invocation-scheme>
+			<scheme-name>MyService</scheme-name>
+			<service-name>MyService</service-name>
+			<thread-count>5</thread-count>
+			<autostart>true</autostart>
+		</invocation-scheme>
+
 	</caching-schemes>
-	
+
 </cache-config>

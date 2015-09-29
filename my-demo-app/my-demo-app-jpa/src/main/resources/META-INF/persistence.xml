@@ -13,10 +13,21 @@
 			<property name="javax.persistence.jdbc.user" value="app" />
 			<property name="javax.persistence.jdbc.password" value="app" />
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
-			<property name="eclipselink.logging.level" value="FINEST" />
 			<property name="eclipselink.ddl-generation" value="create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
+			<property name="eclipselink.logging.file" value="eclipselink.log"/>
+			<property name="eclipselink.logging.level.cache" value="OFF"/>
+			<property name="eclipselink.logging.level.sql" value="FINEST"/>
+			<property name="eclipselink.logging.level" value="FINE"/>
+			<property name="eclipselink.logging.level.connection" value="OFF"/>
+			<property name="eclipselink.logging.level.ddl" value="OFF"/>
+			<property name="eclipselink.logging.level.dms" value="OFF"/>
+			<property name="eclipselink.logging.level.ejb" value="OFF"/>
+			<property name="eclipselink.logging.level.event" value="OFF"/>
+			<property name="eclipselink.logging.level.propagation" value="OFF"/>
+			<property name="eclipselink.logging.session" value="false"/>
+			<property name="eclipselink.logging.connection" value="false"/>
 		</properties>
 	</persistence-unit>
 </persistence>

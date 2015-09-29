@@ -11,5 +11,8 @@
         <dependent-module archiveName="toplink-grid-12.1.3-0-0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/oracle/toplink/toplink-grid/12.1.3-0-0/toplink-grid-12.1.3-0-0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="my-demo-app-jpa-1.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/my-demo-app-jpa/my-demo-app-jpa">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

@@ -92,13 +92,14 @@
             </initiator-config>
         </remote-invocation-scheme>
 
+		<!-- 
  		<invocation-scheme>
                         <scheme-name>MyService-scheme</scheme-name>
                         <service-name>MyService</service-name>
                         <thread-count>2</thread-count>
                         <autostart>true</autostart>
                 </invocation-scheme>
-
+		-->
 	
    
     </caching-schemes>

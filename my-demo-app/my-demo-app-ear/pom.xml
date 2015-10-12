@@ -97,10 +97,11 @@
 							<!--The target servers where the application is deployed. Here use 
 								the plugin's default value AdminServer -->
 
-
+							<!-- 
 							<targets>${oracleServerName}</targets>
+							-->
 							<upload>true</upload>
-							<!-- <targets>${webappClusterName}</targets> -->
+							<targets>${webappClusterName}</targets>
 							<verbose>true</verbose>
 							<name>${project.build.finalName}</name>
 						</configuration>

@@ -56,6 +56,51 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+				<groupId>com.oracle.weblogic</groupId>
+				<artifactId>weblogic-maven-plugin</artifactId>
+				<version>${weblogic.version}</version>
+				<!-- You can find and redefine the following variables in the parent 
+					pom file arccording to your environment. oracleMiddlewareHome oracleServerUrl 
+					oracleUsername oraclePassword oracleServerName -->
+				<configuration>
+					<middlewareHome>${oracleMiddlewareHome}</middlewareHome>
+				</configuration>
+				<executions>
+					<!--Deploy the application to the server -->
+					<execution>
+						<phase>${deployGAR}</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<configuration>
+							<!--The admin URL where the app is deployed. Here use the plugin's 
+								default value t3://localhost:7001 -->
+							<adminurl>${oracleServerUrl}</adminurl>
+							<user>${oracleUsername}</user>
+							<password>${oraclePassword}</password>
+							<!--The location of the file or directory to be deployed -->
+
+							<source>${project.build.directory}/${project.build.finalName}.${project.packaging}
+							</source>
+
+							<!-- <source>${project.build.directory}/${project.build.finalName}</source> -->
+
+							<!--The target servers where the application is deployed. Here use 
+								the plugin's default value AdminServer -->
+
+							<!-- 
+							<targets>${oracleServerName}</targets>
+							-->
+							<upload>true</upload>
+							<targets>${cacheClusterName}</targets>
+							<verbose>true</verbose>
+							<name>${project.build.finalName}</name>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -63,6 +108,7 @@
 		<dependency>
 			<groupId>com.oracle.coherence</groupId>
 			<artifactId>coherence-rest</artifactId>
+			<optional>true</optional>
 			<exclusions>
 				<exclusion>
 					<artifactId>jackson-core-asl</artifactId>
@@ -127,6 +173,7 @@
 			<groupId>com.oracle.toplink</groupId>
 			<artifactId>toplink-grid</artifactId>
 			<version>${weblogic.version}</version>
+			<optional>true</optional>
 			<exclusions>
 				<exclusion>
 					<artifactId>javax.persistence</artifactId>
